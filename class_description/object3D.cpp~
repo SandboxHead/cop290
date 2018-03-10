@@ -11,11 +11,6 @@ public:
 	 */
 
 	create_3D(string file){
-		ifstream inFile;
-
-		inFile.open(file);
-		
-
 
 		/*!
 		 *A 3D graph can be represented as list/array of connected edges and overlapping points.
