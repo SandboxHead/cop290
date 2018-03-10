@@ -21,7 +21,7 @@ public:
 		 * User provide a 3D graph which is required to be converted to 2D, which are projections on any plane.
 		 */
 	}
-	give_projection(){
+	plane_input(){
 		/*!
 		 * User need to provide planes on which he wants to get 2D projections.
 		 * Projections can be provided from different transformations on co-ordinates axes.
