@@ -77,4 +77,9 @@ public:
             vertex[i].rotate_z(theta);
         }
     }
+    void rotate(double theta, double a, double b, double c){
+        for (int i=0; i<total_vertex; i++){
+            vertex[i].rotate(theta, a, b, c);
+        }
+    }
 };

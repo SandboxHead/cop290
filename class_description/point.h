@@ -4,7 +4,7 @@ using namespace std;
 
 class Point{
 private:
-    void product(double inp[4][4]){
+    void *product(double inp[4][4]){
         double temp[4] = {0.0 , 0.0, 0.0, 0.0};
         for (int i=0; i<4; i++){
             for (int j=0; j<4; j++){
@@ -15,7 +15,6 @@ private:
             arr[i] = temp[i];
         }
     }
-    
     double arr[4];
 public:
     Point (double inp[4]){
@@ -61,7 +60,8 @@ public:
                               {0.0, 1.0, 0.0, b},
                               {0.0, 0.0, 1.0, c},
                               {0.0, 0.0, 0.0, 1.0}};
-        product(trans);;
+        product(trans);
+        
     }
     void scale (double a){
         changeVal(arr[0]*a, arr[1]*a, arr[2]*a);
@@ -72,6 +72,32 @@ public:
                               {0.0, 0.0, 1.0, 0.0},
                               {0.0, 0.0, 0.0, 1.0}};
         product(trans);
+        
+    }
+    void rotate_x (double theta){
+        double trans[4][4] = {{1.0, 0.0, 0.0, 0.0},
+                              {0.0, cos(theta), -sin(theta), 0.0},
+                              {0.0, sin(theta), cos(theta), 0.0},
+                              {0.0, 0.0, 0.0, 1.0}};
+        product(trans);
+        
+    }
+    void rotate_y(double theta){
+        double trans[4][4] = {{cos(theta), 0.0, sin(theta), 0.0},
+                              {0.0, 1.0, 0.0, 0.0},
+                              {-sin(theta), cos(theta), 0.0, 0.0},
+                              {0.0, 0.0, 0.0, 1.0}};
+        product(trans);
+        
+    }
+    void rotate(double theta, double a, double b, double c){
+        double alpha = atan(b/c);
+        double beta = atan(a/sqrt(b*b + c*c));
+        rotate_z(alpha);
+        rotatze_y(beta);
+        rotate_z(theta);
+        rotate_y(-beta);
+        rotate_x(-alpha);
     }
 };
 

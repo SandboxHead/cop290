@@ -4,16 +4,16 @@
 using namespace std;
 
 int main(){
-	Object3D o = Object3D("obj.txt");
+	Object3D o = Object3D("out.txt");
 	o.vertices();
-	o.edges();
+	// o.edges();
 
 	o.translate(1.0,1.0,1.0);
-	o.vertices();
+	// o.vertices();
 
 	o.scale(2.0);
 	o.vertices();
 
-	o.rotate_z(3.141525);
+	o.rotate(3.141525, 0.0, 0.0, 1.0);
     o.vertices();
 }
