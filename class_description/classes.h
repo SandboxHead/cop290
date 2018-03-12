@@ -51,11 +51,10 @@ public:
     void changeY(double b){
         arr[1] = b;
     }
-
     void print(){
         printf ("(%f, %f)\n", arr[0] , arr[1]);
     }
-    void translate(double a, double b, double c){
+    void translate(double a, double b){
         double trans[3][3] = {{1.0, 0.0, a},
                               {0.0, 1.0, b},
                               {0.0, 0.0, 1.0}};
@@ -66,54 +65,18 @@ public:
     void scale (double a){
         changeVal(arr[0]*a, arr[1]*a);
     }
-//    void rotate_z (double theta){
-//        double trans[4][4] = {{cos(theta), -sin(theta), 0.0, 0.0},
-//                              {sin(theta), cos(theta), 0.0, 0.0},
-//                              {0.0, 0.0, 1.0, 0.0},
-//                              {0.0, 0.0, 0.0, 1.0}};
-//        product(trans);
-//
-//    }
-//    void rotate_x (double theta){
-//        double trans[4][4] = {{1.0, 0.0, 0.0, 0.0},
-//                              {0.0, cos(theta), -sin(theta), 0.0},
-//                              {0.0, sin(theta), cos(theta), 0.0},
-//                              {0.0, 0.0, 0.0, 1.0}};
-//        product(trans);
-//
-//    }
-//    void rotate_y(double theta){
-//        double trans[4][4] = {{cos(theta), 0.0, sin(theta), 0.0},
-//                              {0.0, 1.0, 0.0, 0.0},
-//                              {-sin(theta), 0.0, cos(theta), 0.0},
-//                              {0.0, 0.0, 0.0, 1.0}};
-//        product(trans);
-//
-//    }
-//    void rotate(double theta, double a, double b, double c){
-//        double alpha;
-//        if (b==0.0 && c==0.0){
-//            alpha = 0.0;
-//        }
-//        else{
-//            alpha = atan(b/c);
-//        }
-//        double beta = atan(a/sqrt(b*b + c*c));
-//        cout << beta << endl;
-//        rotate_x(alpha);
-//        rotate_y(-beta);
-//        rotate_z(theta);
-//        rotate_y(beta);
-//        rotate_x(-alpha);
-//    }
-//    void rotate(double theta, double a, double b, double c, double x0, double y0, double z0){
-//        translate(-x0, -y0, -z0);
-//        rotate(theta, a, b, c);
-//        translate(x0, y0, z0);
-//    }
-//    vector<> project_xy(){
-//
-//    }
+    void rotate_origin (double theta){
+        double trans[3][3] = {{cos(theta), -sin(theta), 0.0},
+                              {sin(theta), cos(theta), 0.0},
+                              {0.0, 0.0, 1.0}};
+        product(trans);
+
+    }
+    void rotate(double theta, double x0, double y0){
+        translate(-x0, -y0);
+        rotate_origin(theta);
+        translate(x0, y0);
+    }
 };
 
 class Point{
@@ -229,6 +192,22 @@ public:
         Point2D p = Point2D(arr[0], arr[1]);
         return p;
     }
+    Point2D project(double a, double b, double c){
+        double alpha;
+        if (b==0.0 && c==0.0){
+            alpha = 0.0;
+        }
+        else{
+            alpha = atan(b/c);
+        }
+        double beta = atan(a/sqrt(b*b + c*c));
+        rotate_x(-alpha);
+        rotate_y(beta);
+        Point2D out = project_xy();
+        rotate_y(-beta);
+        rotate_x(alpha);
+        return out;
+    }
 };
 
 class Object2D{
@@ -300,8 +279,7 @@ public:
      *Input can be provided in suitable data structures, such as a array or list of edges and overlapping points in different set of lists or array.
      *The 2D graph generated will be used by different classes.
      */
-    void print_edges()
-    {
+    void print_edges() {
         int edge_size = edges.size();
         for (int i=0; i<edge_size; i++) {
             int internal = edges[i].size();
@@ -312,8 +290,7 @@ public:
             cout << "\n";
         }
     }
-    void print_vertex()
-    {
+    void print_vertex() {
         int point_size = points.size();
         for (int i=0; i<point_size; i++) {
             cout << points[i].getX() << "," << points[i].getY()  << " " << endl;
@@ -412,7 +389,13 @@ public:
         Object2D out = Object2D(points, edge);
         return out;
     }
+    Object2D project(double a, double b, double c){
+        vector<Point2D> points;
+        for (int i=0; i<total_vertex; i++){
+            Point2D temp = vertex[i].project(a, b, c);
+            points.push_back(temp);
+        }
+        Object2D out = Object2D(points, edge);
+        return out;
+    }
 };
-
-
-
