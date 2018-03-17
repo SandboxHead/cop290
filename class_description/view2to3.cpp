@@ -1,11 +1,8 @@
 #include <bits/stdc++.h>
-#include <QtGui>
 
-#include <process_3D.cpp>
-#include <process_2D.cpp>
-#include <mode.cpp>
-#include <view3to2.cpp>
-#include <display.cpp>
+
+#include <object_2D.cpp>
+
 
 using namespace std;
 
