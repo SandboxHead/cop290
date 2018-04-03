@@ -213,7 +213,7 @@ public:
             alpha = atan(b/c);
         }
         double beta = atan(a/sqrt(b*b + c*c));
-        cout << beta << endl;
+        // cout << beta << endl;
         rotate_x(alpha);
         rotate_y(-beta);
         rotate_z(theta);
@@ -229,6 +229,33 @@ public:
         Point2D p = Point2D(arr[0], arr[1]);
         return p;
     }
+
+    Point2D project_yz(){
+        Point2D p = Point2D(arr[1], arr[2]);
+        return p;
+    }
+
+    Point2D project_zx(){
+        Point2D p = Point2D(arr[2], arr[0]);
+        return p;
+    }
+
+    Point2D project(double a, double b, double c){
+        double alpha;
+        if (b==0.0 && c==0.0){
+            alpha = 0.0;
+        }
+        else{
+            alpha = atan(b/c);
+        }
+        double beta = atan(a/sqrt(b*b + c*c));
+        rotate_x(-alpha);
+        rotate_y(beta);
+        Point2D out = project_xy();
+        rotate_y(-beta);
+        rotate_x(alpha);
+        return out;
+    }
 };
 
 class Object2D{
@@ -237,69 +264,66 @@ class Object2D{
      */
 
 private:
-    vector<Point2D> points;
+    vector<Point2D> vertices;
     vector<vector<int> > edges;
+    int total_vertex = 0;
+    int total_edge = 0;
 
 public:
-    Object2D(const string &filename){
+    Object2D(string file){
+        ifstream myfile;
+        myfile.open(file.c_str());
         string line;
-        ifstream inFile;
-
-        inFile.open(filename);
-
-        if(!inFile){
-            cout << "Unable to open file";
-        }
+        bool vertex_break = true;
         double a, b;
         int x, y;
-        bool data_change=false;
-        bool data_2=false;
-        int point_count=0;
-
-        while(getline(inFile, line))
-        {
+        while (getline(myfile, line)){
             istringstream iss(line);
-            if(iss >> a >> b )
-            {
-                Point2D p  = Point2D(a, b);
-                point_count++;
-                points.push_back(p);
+            if (iss >> a >> b && vertex_break) {
+                Point2D p = Point2D(a, b);
+                total_vertex++;
+                vertices.push_back(p);
             }
-            else if(!data_2)
-            {
-                data_change=true;
-
-            }
-            if(data_change)
-            {
-                data_change = false;
-                data_2 =true;
-                for(int j=0; j<point_count; j++)
-                {
+            else if (vertex_break){
+                vertex_break = false;
+                for (int i=0; i<total_vertex; i++){
+                    // cout << "done" << "\n";
                     vector<int> v;
                     edges.push_back(v);
                 }
             }
-            istringstream ss(line);
-            if(ss >> x >> y)
-            {
-                edges.at(x).push_back(y);
-                edges.at(y).push_back(x);
+            else{
+                istringstream isss(line);
+                if (isss >> x >> y){
+                    total_edge++;
+                    // cout << x << " " << y << "\n";
+                    edges.at(x).push_back(y);
+                    edges.at(y).push_back(x);
+                }
             }
         }
-        inFile.close();
-
-
+        myfile.close();
     }
-    Object2D(vector<Point2D> vertices_inp, vector<vector<int>> edges_inp){
-        points = move(vertices_inp);
-        edges = move(edges_inp);
+
+
+    Object2D(vector<Point2D> vertices_inp, vector<vector<int> > edges_inp){
+        vertices = vertices_inp;
+        edges = edges_inp;
     }
     vector<Point2D> give_vertices(){
-        return points;
+        return vertices;
     }
-    vector<vector<int>> give_edges(){
+    int edges_total(){
+        return total_edge;
+    }
+    vector<vector<int> > give_edges(){
         return edges;
+    }
+
+    void translate(double a, double b){
+        for (int i=0; i<vertices.size(); i++){
+            vertices[i].translate(a, b);
+        }
     }
     /*!
      *This function will take a input and store the 2D projections in appropriate data structures.
@@ -318,11 +342,11 @@ public:
             cout << "\n";
         }
     }
-    void print_vertex()
+    void print_vertices()
     {
-        int point_size = points.size();
+        int point_size = vertices.size();
         for (int i=0; i<point_size; i++) {
-            cout << points[i].getX() << "," << points[i].getY()  << " " << endl;
+            cout << vertices[i].getX() << "," << vertices[i].getY()  << " " << endl;
         }
 
     }
@@ -332,13 +356,16 @@ public:
 class Object3D{
 private:
     vector<Point> vertices;
-    vector<vector<int>> edges;
+    vector<vector<int> > edges;
     int total_vertex = 0;
     int total_edge = 0;
 public:
+    Object3D(){
+        
+    }
     Object3D(string file){
         ifstream myfile;
-        myfile.open(file);
+        myfile.open(file.c_str());
         string line;
         bool vertex_break = true;
         double a, b, c;
@@ -427,15 +454,46 @@ public:
         return out;
     }
 
+    Object2D project_yz(){
+        vector<Point2D> points;
+        for (int i=0; i<total_vertex; i++){
+            Point2D temp = vertices[i].project_yz();
+            points.push_back(temp);
+        }
+        Object2D out = Object2D(points, edges);
+        return out;
+    }
+
+    Object2D project_zx(){
+        vector<Point2D> points;
+        for (int i=0; i<total_vertex; i++){
+            Point2D temp = vertices[i].project_zx();
+            points.push_back(temp);
+        }
+        Object2D out = Object2D(points, edges);
+        return out;
+    }
+
+    Object2D project(double a, double b, double c){
+        vector<Point2D> points;
+        for (int i=0; i<total_vertex; i++){
+            Point2D temp = vertices[i].project(a, b, c);
+            points.push_back(temp);
+        }
+        Object2D out = Object2D(points, edges);
+        return out;
+    }
+
     Object3D(string file1, string file2, int plane1, int plane2) {
         Object2D projection1 = Object2D(file1);
         Object2D projection2 = Object2D(file2);
-
+        // projection1.print_vertices();
+        // projection2.print_edges();
         vector<Point2D> vertices1 = projection1.give_vertices();
         vector<Point2D> vertices2 = projection2.give_vertices();
 
-        vector<vector<int>> edges1 = projection1.give_edges();
-        vector<vector<int>> edges2 = projection2.give_edges();
+        vector<vector<int> > edges1 = projection1.give_edges();
+        vector<vector<int> > edges2 = projection2.give_edges();
 
         edges = edges1;
         if (plane1 == 1 && plane2 == 2) {
@@ -451,9 +509,8 @@ public:
                 vertices.push_back(Point(vertices1[i].getX(), vertices1[i].getY(), vertices2[i].getX()));
             }
         }
+        total_vertex = vertices.size();
+        total_edge = projection1.edges_total();
+        
     }
 };
-
-
-
-
