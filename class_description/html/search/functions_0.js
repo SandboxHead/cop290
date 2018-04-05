@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['check_5fqualify',['check_qualify',['../classview2Dto3D.html#a502d119bc3cb39c9c43ce6663e420ce5',1,'view2Dto3D']]],
-  ['create_5f2d',['create_2D',['../classgenerate__2D.html#a8f877568a90f4e5884ff03aa418f1169',1,'generate_2D']]],
-  ['create_5f3d',['create_3D',['../classgenerate__3D.html#acd71c91967bb90a72123fd505dcea493',1,'generate_3D']]]
+  ['changeval',['changeVal',['../classPoint2D.html#a26eb8f9838369ac5c93b97d9a8928c4d',1,'Point2D::changeVal()'],['../classPoint.html#a5d66dd08c4c5250b28e96bef02989023',1,'Point::changeVal()']]],
+  ['changex',['changeX',['../classPoint2D.html#a596103c51ead1e076f4eddb49585793c',1,'Point2D::changeX()'],['../classPoint.html#a2f2bf60675fa39288c64ceda699a1904',1,'Point::changeX()']]],
+  ['changey',['changeY',['../classPoint2D.html#a6bbc4cffdcff5360856bdf079f18ef7a',1,'Point2D::changeY()'],['../classPoint.html#ae09876e278f0dd55dd43b5b00ac7425c',1,'Point::changeY()']]],
+  ['changez',['changeZ',['../classPoint.html#aa230fef488efa82249ecf44e84563c5d',1,'Point']]]
 ];

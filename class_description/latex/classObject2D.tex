@@ -1,0 +1,98 @@
+\hypertarget{classObject2D}{}\section{Object2D Class Reference}
+\label{classObject2D}\index{Object2D@{Object2D}}
+
+
+{\ttfamily \#include $<$classes.\+h$>$}
+
+
+
+Collaboration diagram for Object2D\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject2D_a739b17c886965081e66ec86d2e5e7234}{Object2D} (string file)
+\item 
+\hyperlink{classObject2D_a5f8bcebea10425ed9629869fe9e29290}{Object2D} (vector$<$ \hyperlink{classPoint2D}{Point2D} $>$ vertices\+\_\+inp, vector$<$ vector$<$ int $>$ $>$ edges\+\_\+inp)
+\item 
+vector$<$ \hyperlink{classPoint2D}{Point2D} $>$ \hyperlink{classObject2D_a04898c8cee41770643713487c5c09cbe}{give\+\_\+vertices} ()
+\item 
+int \hyperlink{classObject2D_a09d557eb2909002f20f2cb6d42eace34}{edges\+\_\+total} ()
+\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{classObject2D_a213156360de6ea8e95174089a35975eb}{give\+\_\+edges} ()
+\item 
+void \hyperlink{classObject2D_a04fb21cb680e7d5e79f3156d1fbf5109}{translate} (double a, double b)
+\item 
+void \hyperlink{classObject2D_a097012d9fdd08a00ec4f25a7962ba0c4}{print\+\_\+edges} ()
+\item 
+void \hyperlink{classObject2D_a59e9906fcf38d512fd8be5ad947bf857}{print\+\_\+vertices} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Object2D@{Object2D}!Object2D@{Object2D}}
+\index{Object2D@{Object2D}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{Object2\+D(string file)}{Object2D(string file)}}]{\setlength{\rightskip}{0pt plus 5cm}Object2\+D\+::\+Object2D (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a739b17c886965081e66ec86d2e5e7234}{}\label{classObject2D_a739b17c886965081e66ec86d2e5e7234}
+This one constructs a 2D object from input\+\_\+file. \index{Object2D@{Object2D}!Object2D@{Object2D}}
+\index{Object2D@{Object2D}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{Object2\+D(vector$<$ Point2\+D $>$ vertices\+\_\+inp, vector$<$ vector$<$ int $>$ $>$ edges\+\_\+inp)}{Object2D(vector< Point2D > vertices_inp, vector< vector< int > > edges_inp)}}]{\setlength{\rightskip}{0pt plus 5cm}Object2\+D\+::\+Object2D (
+\begin{DoxyParamCaption}
+\item[{vector$<$ {\bf Point2D} $>$}]{vertices\+\_\+inp, }
+\item[{vector$<$ vector$<$ int $>$ $>$}]{edges\+\_\+inp}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a5f8bcebea10425ed9629869fe9e29290}{}\label{classObject2D_a5f8bcebea10425ed9629869fe9e29290}
+For constructing object from provided input edges and points. 
+
+\subsection{Member Function Documentation}
+\index{Object2D@{Object2D}!edges\+\_\+total@{edges\+\_\+total}}
+\index{edges\+\_\+total@{edges\+\_\+total}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{edges\+\_\+total()}{edges_total()}}]{\setlength{\rightskip}{0pt plus 5cm}int Object2\+D\+::edges\+\_\+total (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a09d557eb2909002f20f2cb6d42eace34}{}\label{classObject2D_a09d557eb2909002f20f2cb6d42eace34}
+Returns total number of edges of the object. \index{Object2D@{Object2D}!give\+\_\+edges@{give\+\_\+edges}}
+\index{give\+\_\+edges@{give\+\_\+edges}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{give\+\_\+edges()}{give_edges()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$int$>$ $>$ Object2\+D\+::give\+\_\+edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a213156360de6ea8e95174089a35975eb}{}\label{classObject2D_a213156360de6ea8e95174089a35975eb}
+Returns edges of the object. \index{Object2D@{Object2D}!give\+\_\+vertices@{give\+\_\+vertices}}
+\index{give\+\_\+vertices@{give\+\_\+vertices}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{give\+\_\+vertices()}{give_vertices()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Point2D}$>$ Object2\+D\+::give\+\_\+vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a04898c8cee41770643713487c5c09cbe}{}\label{classObject2D_a04898c8cee41770643713487c5c09cbe}
+Returns vertices of the object. \index{Object2D@{Object2D}!print\+\_\+edges@{print\+\_\+edges}}
+\index{print\+\_\+edges@{print\+\_\+edges}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{print\+\_\+edges()}{print_edges()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object2\+D\+::print\+\_\+edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a097012d9fdd08a00ec4f25a7962ba0c4}{}\label{classObject2D_a097012d9fdd08a00ec4f25a7962ba0c4}
+Print all the edges of a 2D object. \index{Object2D@{Object2D}!print\+\_\+vertices@{print\+\_\+vertices}}
+\index{print\+\_\+vertices@{print\+\_\+vertices}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{print\+\_\+vertices()}{print_vertices()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object2\+D\+::print\+\_\+vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a59e9906fcf38d512fd8be5ad947bf857}{}\label{classObject2D_a59e9906fcf38d512fd8be5ad947bf857}
+Prints all the vertices of a 2D object. \index{Object2D@{Object2D}!translate@{translate}}
+\index{translate@{translate}!Object2D@{Object2D}}
+\subsubsection[{\texorpdfstring{translate(double a, double b)}{translate(double a, double b)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object2\+D\+::translate (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject2D_a04fb21cb680e7d5e79f3156d1fbf5109}{}\label{classObject2D_a04fb21cb680e7d5e79f3156d1fbf5109}
+Translates the object by (a,b). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classes_8h}{classes.\+h}\end{DoxyCompactItemize}

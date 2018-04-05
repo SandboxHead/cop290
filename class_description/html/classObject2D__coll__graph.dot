@@ -1,0 +1,7 @@
+digraph "Object2D"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Object2D\n||+ Object2D()\l+ Object2D()\l+ give_vertices()\l+ edges_total()\l+ give_edges()\l+ translate()\l+ print_edges()\l+ print_vertices()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}

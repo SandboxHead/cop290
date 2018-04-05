@@ -1,0 +1,184 @@
+\hypertarget{classObject3D}{}\section{Object3D Class Reference}
+\label{classObject3D}\index{Object3D@{Object3D}}
+
+
+{\ttfamily \#include $<$classes.\+h$>$}
+
+
+
+Collaboration diagram for Object3D\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classObject3D_ae3a1b17fb43ab59f5cf7b0ee21b9120b}{Object3D} ()
+\item 
+\hyperlink{classObject3D_ae3f10dd2d8e3e3a96dca73b40e345375}{Object3D} (string file)
+\item 
+void \hyperlink{classObject3D_ada1a9fc9652fe0a548a8ecdac061c4f6}{print\+\_\+vertices} ()
+\item 
+vector$<$ \hyperlink{classPoint}{Point} $>$ \hyperlink{classObject3D_afedea745458d1a9910d01748129f0dcd}{give\+\_\+vertices} ()
+\item 
+void \hyperlink{classObject3D_ace48934d92890daad6dc569e89e3a82a}{print\+\_\+edges} ()
+\item 
+vector$<$ vector$<$ int $>$ $>$ \hyperlink{classObject3D_a8a4fef3fb749f72d1de7f855ab4f96cc}{give\+\_\+edges} ()
+\item 
+void \hyperlink{classObject3D_a5266235a36e5082d7727ad5050f38dc0}{translate} (double a, double b, double c)
+\item 
+void \hyperlink{classObject3D_aa910d21198273cad51bc08e61f3b8aa7}{scale} (double a)
+\item 
+void \hyperlink{classObject3D_aa2ceafd7250e5a2ec41ac5321eb7d82e}{rotate\+\_\+z} (double theta)
+\item 
+void \hyperlink{classObject3D_ae7f192e7b2da6473350c9aa75b18cd63}{rotate} (double theta, double a, double b, double c)
+\item 
+void \hyperlink{classObject3D_a14b80284f9b482375aa4ee135c30f95f}{rotate} (double theta, double a, double b, double c, double x0, double y0, double z0)
+\item 
+\hyperlink{classObject2D}{Object2D} \hyperlink{classObject3D_a6693c09478947acbd1db343a4e078119}{project\+\_\+xy} ()
+\item 
+\hyperlink{classObject2D}{Object2D} \hyperlink{classObject3D_aca283286fda96635052da68c760cb8fb}{project\+\_\+yz} ()
+\item 
+\hyperlink{classObject2D}{Object2D} \hyperlink{classObject3D_a79eda264b9b70a562f17eb6bb70ccd6b}{project\+\_\+zx} ()
+\item 
+\hyperlink{classObject2D}{Object2D} \hyperlink{classObject3D_adbd33325036cbcb35429ff2c741dd805}{project} (double a, double b, double c)
+\item 
+\hyperlink{classObject3D_a56ab97ef9b66d47272249ecca291eb70}{Object3D} (string file1, string file2, int plane1, int plane2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Object3D@{Object3D}!Object3D@{Object3D}}
+\index{Object3D@{Object3D}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{Object3\+D()}{Object3D()}}]{\setlength{\rightskip}{0pt plus 5cm}Object3\+D\+::\+Object3D (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_ae3a1b17fb43ab59f5cf7b0ee21b9120b}{}\label{classObject3D_ae3a1b17fb43ab59f5cf7b0ee21b9120b}
+Creates a null 3D object. \index{Object3D@{Object3D}!Object3D@{Object3D}}
+\index{Object3D@{Object3D}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{Object3\+D(string file)}{Object3D(string file)}}]{\setlength{\rightskip}{0pt plus 5cm}Object3\+D\+::\+Object3D (
+\begin{DoxyParamCaption}
+\item[{string}]{file}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_ae3f10dd2d8e3e3a96dca73b40e345375}{}\label{classObject3D_ae3f10dd2d8e3e3a96dca73b40e345375}
+Constructs a 3D object from file input. \index{Object3D@{Object3D}!Object3D@{Object3D}}
+\index{Object3D@{Object3D}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{Object3\+D(string file1, string file2, int plane1, int plane2)}{Object3D(string file1, string file2, int plane1, int plane2)}}]{\setlength{\rightskip}{0pt plus 5cm}Object3\+D\+::\+Object3D (
+\begin{DoxyParamCaption}
+\item[{string}]{file1, }
+\item[{string}]{file2, }
+\item[{int}]{plane1, }
+\item[{int}]{plane2}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a56ab97ef9b66d47272249ecca291eb70}{}\label{classObject3D_a56ab97ef9b66d47272249ecca291eb70}
+Constructs a 3D object from given 2 2D objects and planes. 
+
+\subsection{Member Function Documentation}
+\index{Object3D@{Object3D}!give\+\_\+edges@{give\+\_\+edges}}
+\index{give\+\_\+edges@{give\+\_\+edges}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{give\+\_\+edges()}{give_edges()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$vector$<$int$>$ $>$ Object3\+D\+::give\+\_\+edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a8a4fef3fb749f72d1de7f855ab4f96cc}{}\label{classObject3D_a8a4fef3fb749f72d1de7f855ab4f96cc}
+Returns edges of the 3D object. \index{Object3D@{Object3D}!give\+\_\+vertices@{give\+\_\+vertices}}
+\index{give\+\_\+vertices@{give\+\_\+vertices}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{give\+\_\+vertices()}{give_vertices()}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf Point}$>$ Object3\+D\+::give\+\_\+vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_afedea745458d1a9910d01748129f0dcd}{}\label{classObject3D_afedea745458d1a9910d01748129f0dcd}
+Returns vertices of the 3D object \index{Object3D@{Object3D}!print\+\_\+edges@{print\+\_\+edges}}
+\index{print\+\_\+edges@{print\+\_\+edges}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{print\+\_\+edges()}{print_edges()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::print\+\_\+edges (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_ace48934d92890daad6dc569e89e3a82a}{}\label{classObject3D_ace48934d92890daad6dc569e89e3a82a}
+Prints edges of the object. \index{Object3D@{Object3D}!print\+\_\+vertices@{print\+\_\+vertices}}
+\index{print\+\_\+vertices@{print\+\_\+vertices}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{print\+\_\+vertices()}{print_vertices()}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::print\+\_\+vertices (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_ada1a9fc9652fe0a548a8ecdac061c4f6}{}\label{classObject3D_ada1a9fc9652fe0a548a8ecdac061c4f6}
+Prints vertices of the 3D object. \index{Object3D@{Object3D}!project@{project}}
+\index{project@{project}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{project(double a, double b, double c)}{project(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2D} Object3\+D\+::project (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_adbd33325036cbcb35429ff2c741dd805}{}\label{classObject3D_adbd33325036cbcb35429ff2c741dd805}
+Projects the 3D object on a plane passing through origin and perpendicular having slope (a,b,c). \index{Object3D@{Object3D}!project\+\_\+xy@{project\+\_\+xy}}
+\index{project\+\_\+xy@{project\+\_\+xy}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{project\+\_\+xy()}{project_xy()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2D} Object3\+D\+::project\+\_\+xy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a6693c09478947acbd1db343a4e078119}{}\label{classObject3D_a6693c09478947acbd1db343a4e078119}
+Projects the 3D object on xy plane. \index{Object3D@{Object3D}!project\+\_\+yz@{project\+\_\+yz}}
+\index{project\+\_\+yz@{project\+\_\+yz}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{project\+\_\+yz()}{project_yz()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2D} Object3\+D\+::project\+\_\+yz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_aca283286fda96635052da68c760cb8fb}{}\label{classObject3D_aca283286fda96635052da68c760cb8fb}
+Projects the 3D object on yz plane. \index{Object3D@{Object3D}!project\+\_\+zx@{project\+\_\+zx}}
+\index{project\+\_\+zx@{project\+\_\+zx}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{project\+\_\+zx()}{project_zx()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Object2D} Object3\+D\+::project\+\_\+zx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a79eda264b9b70a562f17eb6bb70ccd6b}{}\label{classObject3D_a79eda264b9b70a562f17eb6bb70ccd6b}
+Projects the object on zx plane. \index{Object3D@{Object3D}!rotate@{rotate}}
+\index{rotate@{rotate}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{rotate(double theta, double a, double b, double c)}{rotate(double theta, double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::rotate (
+\begin{DoxyParamCaption}
+\item[{double}]{theta, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_ae7f192e7b2da6473350c9aa75b18cd63}{}\label{classObject3D_ae7f192e7b2da6473350c9aa75b18cd63}
+Rotates the object around an axis passing through origin with slope (a,b,c). \index{Object3D@{Object3D}!rotate@{rotate}}
+\index{rotate@{rotate}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{rotate(double theta, double a, double b, double c, double x0, double y0, double z0)}{rotate(double theta, double a, double b, double c, double x0, double y0, double z0)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::rotate (
+\begin{DoxyParamCaption}
+\item[{double}]{theta, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{z0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a14b80284f9b482375aa4ee135c30f95f}{}\label{classObject3D_a14b80284f9b482375aa4ee135c30f95f}
+Rotates the object around a line passing through (x0, y0, z0) with slope (a,b,c). \index{Object3D@{Object3D}!rotate\+\_\+z@{rotate\+\_\+z}}
+\index{rotate\+\_\+z@{rotate\+\_\+z}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+z(double theta)}{rotate_z(double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::rotate\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_aa2ceafd7250e5a2ec41ac5321eb7d82e}{}\label{classObject3D_aa2ceafd7250e5a2ec41ac5321eb7d82e}
+Rotates the object around Z\+\_\+axis by angle theta. \index{Object3D@{Object3D}!scale@{scale}}
+\index{scale@{scale}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{scale(double a)}{scale(double a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::scale (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_aa910d21198273cad51bc08e61f3b8aa7}{}\label{classObject3D_aa910d21198273cad51bc08e61f3b8aa7}
+Scales the object by a factor of input \textquotesingle{}a\textquotesingle{}. \index{Object3D@{Object3D}!translate@{translate}}
+\index{translate@{translate}!Object3D@{Object3D}}
+\subsubsection[{\texorpdfstring{translate(double a, double b, double c)}{translate(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Object3\+D\+::translate (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classObject3D_a5266235a36e5082d7727ad5050f38dc0}{}\label{classObject3D_a5266235a36e5082d7727ad5050f38dc0}
+Translates object in 3D space by (a, b, c). 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classes_8h}{classes.\+h}\end{DoxyCompactItemize}

@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['generate_5f2d',['generate_2D',['../classgenerate__2D.html',1,'']]],
-  ['generate_5f3d',['generate_3D',['../classgenerate__3D.html',1,'']]],
-  ['generate_5fdisplay',['generate_display',['../classgenerate__display.html',1,'']]]
+  ['object2d',['Object2D',['../classObject2D.html',1,'']]],
+  ['object3d',['Object3D',['../classObject3D.html',1,'']]]
 ];

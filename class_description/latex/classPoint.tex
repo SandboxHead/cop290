@@ -1,0 +1,230 @@
+\hypertarget{classPoint}{}\section{Point Class Reference}
+\label{classPoint}\index{Point@{Point}}
+
+
+{\ttfamily \#include $<$classes.\+h$>$}
+
+
+
+Collaboration diagram for Point\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classPoint_af2e3e1083751e14bc05209f4c4a1339a}{Point} (double inp\mbox{[}4\mbox{]})
+\item 
+\hyperlink{classPoint_adbf32d53d1eed06207a1bfdea4372415}{Point} (double a, double b, double c)
+\item 
+double \hyperlink{classPoint_a8de35a6098cdd7267b4167776da83da6}{getX} ()
+\item 
+double \hyperlink{classPoint_aa278c8bcb8aeb4101023a4baf473b547}{getY} ()
+\item 
+double \hyperlink{classPoint_a7c43742b167f182e08cc1b9aac9661e9}{getZ} ()
+\item 
+void \hyperlink{classPoint_a5d66dd08c4c5250b28e96bef02989023}{change\+Val} (double a, double b, double c)
+\item 
+void \hyperlink{classPoint_a2f2bf60675fa39288c64ceda699a1904}{changeX} (double a)
+\item 
+void \hyperlink{classPoint_ae09876e278f0dd55dd43b5b00ac7425c}{changeY} (double b)
+\item 
+void \hyperlink{classPoint_aa230fef488efa82249ecf44e84563c5d}{changeZ} (double c)
+\item 
+void \hyperlink{classPoint_a76c5855c06d98aed16b5796a9a50bbee}{print} ()
+\item 
+void \hyperlink{classPoint_afcdc5122dfa1f2840b3b524479d935cc}{translate} (double a, double b, double c)
+\item 
+void \hyperlink{classPoint_afafcd999caaf87a57be94847462a3a6f}{scale} (double a)
+\item 
+void \hyperlink{classPoint_a7d2a3f6fe7359761c108379ea4e79626}{rotate\+\_\+z} (double theta)
+\item 
+void \hyperlink{classPoint_af04a158a7fd9ae686d4c752e73db189c}{rotate\+\_\+x} (double theta)
+\item 
+void \hyperlink{classPoint_add5c1d825448e3d754f8ff187a9dc439}{rotate\+\_\+y} (double theta)
+\item 
+void \hyperlink{classPoint_ad98797f912e1a2420c363a7ca55afa80}{rotate} (double theta, double a, double b, double c)
+\item 
+void \hyperlink{classPoint_a8aa4e6bf40ea00573ed05a7cedf1b368}{rotate} (double theta, double a, double b, double c, double x0, double y0, double z0)
+\item 
+\hyperlink{classPoint2D}{Point2D} \hyperlink{classPoint_ad7e5c64b2250c087c7771f95c7587ba3}{project\+\_\+xy} ()
+\item 
+\hyperlink{classPoint2D}{Point2D} \hyperlink{classPoint_a77b683bd7b39828cdfa0866723cd4799}{project\+\_\+yz} ()
+\item 
+\hyperlink{classPoint2D}{Point2D} \hyperlink{classPoint_a67b47aabdaa4f556a1abcbb40a71b18c}{project\+\_\+zx} ()
+\item 
+\hyperlink{classPoint2D}{Point2D} \hyperlink{classPoint_aef6927081991353b2154afd3e6e613ef}{project} (double a, double b, double c)
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point(double inp[4])}{Point(double inp[4])}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{inp\mbox{[}4\mbox{]}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_af2e3e1083751e14bc05209f4c4a1339a}{}\label{classPoint_af2e3e1083751e14bc05209f4c4a1339a}
+Function for putting input to object data. \index{Point@{Point}!Point@{Point}}
+\index{Point@{Point}!Point@{Point}}
+\subsubsection[{\texorpdfstring{Point(double a, double b, double c)}{Point(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}Point\+::\+Point (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_adbf32d53d1eed06207a1bfdea4372415}{}\label{classPoint_adbf32d53d1eed06207a1bfdea4372415}
+Construct a \hyperlink{classPoint}{Point} object from input providing (x,y,z) coordinates. 
+
+\subsection{Member Function Documentation}
+\index{Point@{Point}!change\+Val@{change\+Val}}
+\index{change\+Val@{change\+Val}!Point@{Point}}
+\subsubsection[{\texorpdfstring{change\+Val(double a, double b, double c)}{changeVal(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::change\+Val (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a5d66dd08c4c5250b28e96bef02989023}{}\label{classPoint_a5d66dd08c4c5250b28e96bef02989023}
+Changes the \hyperlink{classPoint}{Point}\textquotesingle{}s coordinates to given inputs. \index{Point@{Point}!changeX@{changeX}}
+\index{changeX@{changeX}!Point@{Point}}
+\subsubsection[{\texorpdfstring{change\+X(double a)}{changeX(double a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::changeX (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a2f2bf60675fa39288c64ceda699a1904}{}\label{classPoint_a2f2bf60675fa39288c64ceda699a1904}
+Changes x coordinate of the point. \index{Point@{Point}!changeY@{changeY}}
+\index{changeY@{changeY}!Point@{Point}}
+\subsubsection[{\texorpdfstring{change\+Y(double b)}{changeY(double b)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::changeY (
+\begin{DoxyParamCaption}
+\item[{double}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_ae09876e278f0dd55dd43b5b00ac7425c}{}\label{classPoint_ae09876e278f0dd55dd43b5b00ac7425c}
+Changes y coordinate of the point. \index{Point@{Point}!changeZ@{changeZ}}
+\index{changeZ@{changeZ}!Point@{Point}}
+\subsubsection[{\texorpdfstring{change\+Z(double c)}{changeZ(double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::changeZ (
+\begin{DoxyParamCaption}
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_aa230fef488efa82249ecf44e84563c5d}{}\label{classPoint_aa230fef488efa82249ecf44e84563c5d}
+Changes z coordinates of the point . \index{Point@{Point}!getX@{getX}}
+\index{getX@{getX}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+X()}{getX()}}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::getX (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a8de35a6098cdd7267b4167776da83da6}{}\label{classPoint_a8de35a6098cdd7267b4167776da83da6}
+Returns x coordinate of the point. \index{Point@{Point}!getY@{getY}}
+\index{getY@{getY}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Y()}{getY()}}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::getY (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_aa278c8bcb8aeb4101023a4baf473b547}{}\label{classPoint_aa278c8bcb8aeb4101023a4baf473b547}
+Returns y coordinate of the point. \index{Point@{Point}!getZ@{getZ}}
+\index{getZ@{getZ}!Point@{Point}}
+\subsubsection[{\texorpdfstring{get\+Z()}{getZ()}}]{\setlength{\rightskip}{0pt plus 5cm}double Point\+::getZ (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a7c43742b167f182e08cc1b9aac9661e9}{}\label{classPoint_a7c43742b167f182e08cc1b9aac9661e9}
+Returns z coordinate of the point. \index{Point@{Point}!print@{print}}
+\index{print@{print}!Point@{Point}}
+\subsubsection[{\texorpdfstring{print()}{print()}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::print (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a76c5855c06d98aed16b5796a9a50bbee}{}\label{classPoint_a76c5855c06d98aed16b5796a9a50bbee}
+Prints coordinates of the point. \index{Point@{Point}!project@{project}}
+\index{project@{project}!Point@{Point}}
+\subsubsection[{\texorpdfstring{project(double a, double b, double c)}{project(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Point\+::project (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_aef6927081991353b2154afd3e6e613ef}{}\label{classPoint_aef6927081991353b2154afd3e6e613ef}
+Project the point on an arbitrary plane with perpendicular slope (a,b,c) and passing through origin. \index{Point@{Point}!project\+\_\+xy@{project\+\_\+xy}}
+\index{project\+\_\+xy@{project\+\_\+xy}!Point@{Point}}
+\subsubsection[{\texorpdfstring{project\+\_\+xy()}{project_xy()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Point\+::project\+\_\+xy (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_ad7e5c64b2250c087c7771f95c7587ba3}{}\label{classPoint_ad7e5c64b2250c087c7771f95c7587ba3}
+Project a point on xy plane. \index{Point@{Point}!project\+\_\+yz@{project\+\_\+yz}}
+\index{project\+\_\+yz@{project\+\_\+yz}!Point@{Point}}
+\subsubsection[{\texorpdfstring{project\+\_\+yz()}{project_yz()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Point\+::project\+\_\+yz (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a77b683bd7b39828cdfa0866723cd4799}{}\label{classPoint_a77b683bd7b39828cdfa0866723cd4799}
+Project a point on yz plane. \index{Point@{Point}!project\+\_\+zx@{project\+\_\+zx}}
+\index{project\+\_\+zx@{project\+\_\+zx}!Point@{Point}}
+\subsubsection[{\texorpdfstring{project\+\_\+zx()}{project_zx()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Point2D} Point\+::project\+\_\+zx (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a67b47aabdaa4f556a1abcbb40a71b18c}{}\label{classPoint_a67b47aabdaa4f556a1abcbb40a71b18c}
+Project a point on zx plane. \index{Point@{Point}!rotate@{rotate}}
+\index{rotate@{rotate}!Point@{Point}}
+\subsubsection[{\texorpdfstring{rotate(double theta, double a, double b, double c)}{rotate(double theta, double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::rotate (
+\begin{DoxyParamCaption}
+\item[{double}]{theta, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_ad98797f912e1a2420c363a7ca55afa80}{}\label{classPoint_ad98797f912e1a2420c363a7ca55afa80}
+This one rotates a point about an axis perpendicular to a plane with slope a, b, c by angle theta. The line passes through origin. \index{Point@{Point}!rotate@{rotate}}
+\index{rotate@{rotate}!Point@{Point}}
+\subsubsection[{\texorpdfstring{rotate(double theta, double a, double b, double c, double x0, double y0, double z0)}{rotate(double theta, double a, double b, double c, double x0, double y0, double z0)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::rotate (
+\begin{DoxyParamCaption}
+\item[{double}]{theta, }
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c, }
+\item[{double}]{x0, }
+\item[{double}]{y0, }
+\item[{double}]{z0}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a8aa4e6bf40ea00573ed05a7cedf1b368}{}\label{classPoint_a8aa4e6bf40ea00573ed05a7cedf1b368}
+Rotates a point around a line passing through (x0, y0, z0). \index{Point@{Point}!rotate\+\_\+x@{rotate\+\_\+x}}
+\index{rotate\+\_\+x@{rotate\+\_\+x}!Point@{Point}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+x(double theta)}{rotate_x(double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::rotate\+\_\+x (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_af04a158a7fd9ae686d4c752e73db189c}{}\label{classPoint_af04a158a7fd9ae686d4c752e73db189c}
+Rotate a point around x axis by angle theta. \index{Point@{Point}!rotate\+\_\+y@{rotate\+\_\+y}}
+\index{rotate\+\_\+y@{rotate\+\_\+y}!Point@{Point}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+y(double theta)}{rotate_y(double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::rotate\+\_\+y (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_add5c1d825448e3d754f8ff187a9dc439}{}\label{classPoint_add5c1d825448e3d754f8ff187a9dc439}
+Rotates a point around Y\+\_\+axis. \index{Point@{Point}!rotate\+\_\+z@{rotate\+\_\+z}}
+\index{rotate\+\_\+z@{rotate\+\_\+z}!Point@{Point}}
+\subsubsection[{\texorpdfstring{rotate\+\_\+z(double theta)}{rotate_z(double theta)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::rotate\+\_\+z (
+\begin{DoxyParamCaption}
+\item[{double}]{theta}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_a7d2a3f6fe7359761c108379ea4e79626}{}\label{classPoint_a7d2a3f6fe7359761c108379ea4e79626}
+To rotate a point around z axis by theta. \index{Point@{Point}!scale@{scale}}
+\index{scale@{scale}!Point@{Point}}
+\subsubsection[{\texorpdfstring{scale(double a)}{scale(double a)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::scale (
+\begin{DoxyParamCaption}
+\item[{double}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_afafcd999caaf87a57be94847462a3a6f}{}\label{classPoint_afafcd999caaf87a57be94847462a3a6f}
+Function to scale an object by a factor of a. \index{Point@{Point}!translate@{translate}}
+\index{translate@{translate}!Point@{Point}}
+\subsubsection[{\texorpdfstring{translate(double a, double b, double c)}{translate(double a, double b, double c)}}]{\setlength{\rightskip}{0pt plus 5cm}void Point\+::translate (
+\begin{DoxyParamCaption}
+\item[{double}]{a, }
+\item[{double}]{b, }
+\item[{double}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{classPoint_afcdc5122dfa1f2840b3b524479d935cc}{}\label{classPoint_afcdc5122dfa1f2840b3b524479d935cc}
+Function to translate a 3D point in coordinate system. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classes_8h}{classes.\+h}\end{DoxyCompactItemize}

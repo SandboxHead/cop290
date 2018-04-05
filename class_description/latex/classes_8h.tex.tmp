@@ -1,0 +1,26 @@
+\hypertarget{classes_8h}{}\section{classes.\+h File Reference}
+\label{classes_8h}\index{classes.\+h@{classes.\+h}}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$utility$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+Include dependency graph for classes.\+h\+:
+% FIG 0
+This graph shows which files directly or indirectly include this file\+:
+% FIG 1
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classPoint2D}{Point2D}
+\item 
+class \hyperlink{classPoint}{Point}
+\item 
+class \hyperlink{classObject2D}{Object2D}
+\item 
+class \hyperlink{classObject3D}{Object3D}
+\end{DoxyCompactItemize}

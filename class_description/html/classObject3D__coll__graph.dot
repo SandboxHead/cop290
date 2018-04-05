@@ -1,0 +1,7 @@
+digraph "Object3D"
+{
+  bgcolor="transparent";
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{Object3D\n||+ Object3D()\l+ Object3D()\l+ print_vertices()\l+ give_vertices()\l+ print_edges()\l+ give_edges()\l+ translate()\l+ scale()\l+ rotate_z()\l+ rotate()\l+ rotate()\l+ project_xy()\l+ project_yz()\l+ project_zx()\l+ project()\l+ Object3D()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+}
